@@ -1,154 +1,98 @@
-
 <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-default ie-nav" [containerInside]="false">
-    <logo>
-        <a class="logo navbar-brand" href="/"><strong>المكتب الاعلامي لرئاسة الوزراء</strong></a>    
-    </logo>
- 
-    <links>
-        <ul class="navbar-nav mr-auto">
-                <li class="nav-item active waves-light" mdbRippleRadius>
-                    <!-- Search form -->
-                    <form class="form-inline  waves-light" mdbRippleRadius>
-                       <input class="form-control mr-sm-2" type="text" placeholder="بحث">
-                   </form>
-                </li>
-            </ul>
-            <ul class="navbar-nav nav-flex-icons">
-                    <li class="nav-item waves-light" mdbRippleRadius>
-                        <a class="nav-link"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li class="nav-item waves-light" mdbRippleRadius>
-                        <a class="nav-link"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li class="nav-item waves-light" mdbRippleRadius>
-                        <a class="nav-link"><i class="fa fa-instagram"></i></a>
-                    </li>
-                </ul>
-    </links>
-  </mdb-navbar>
+  <logo>
+    <img src=".\assets\images\logo-sm.png" class="img-fluid" align="right">
+    <a class="logo navbar-brand" href="/">
+      <h3>
+        <strong>المكتب الاعلامي لرئاسة الوزراء</strong>
+      </h3>
+    </a>
+  </logo>
+  <links>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active waves-light" mdbRippleRadius>
+        <!-- Search form -->
+        <form class="form-inline  waves-light" mdbRippleRadius>
+          <input class="form-control mr-sm-2" type="text" placeholder="بحث">
+        </form>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav-flex-icons">
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item waves-light" mdbRippleRadius>
+        <a class="nav-link">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
 
-  <img src=".\assets\images\Banner-2.jpg" class="img-fluid" alt="Responsive image" style="padding-top: 55px;">
+<img src=".\assets\images\Banner-2.jpg" class="img-fluid" alt="Responsive image" style="padding-top: 60px;">
 
 <!-- Main -->
 <main>
   <div class="container" style="height:1500px;">
-      
-      <div class="row pt-5">
-          <div class="col text-center">
-               
-
-            
-<!--Section: Blog v.1-->
-<section class="section pb-3 text-center text-lg-right">
-
-    <!--Section heading-->
-    <h1 class="section-heading h1 pt-4">اخر البيانات</h1>
-    <!--Section description-->
-    <p class="section-description">اخر البيانات</p>
-
-    <!--Grid row-->
-    <div class="row">
-
-        <!--Grid column-->
-        <div class="col-lg-5 col-xl-4 offset-xl-1 pb-3">
-            <!--Featured image-->
-            <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
+    <div class="row pt-5">
+      <div class="col text-center">
+        <!--Section: Blog v.1-->
+        <section class="section pb-3 text-center text-lg-right">
+          <!--Section heading-->
+          <h1 class="section-heading h1 pt-4">{{type}}</h1>
+          <!--Section description-->
+          <p class="section-description">{{type}}</p>
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-5 col-xl-4 offset-xl-1 pb-3">
+              <!--Featured image-->
+              <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
                 <img src=".\assets\images\logo.jpg" alt="Sample image for first version of blog listing" height="300" width="300">
                 <a>
-                    <div class="mask"></div>
+                  <div class="mask"></div>
                 </a>
+              </div>
             </div>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-7 col-xl-6">
-            <!--Excerpt-->
-            <a href="" class="green-text"><h6 class="font-bold pb-1"><i class="fa fa-cutlery"></i> البيانات</h6></a>
-            <h4 class="mb-4"><strong>رئيس مجلس الوزراء الدكتور حيدر العبادي يتلقى اتصالا هاتفيا من ملك المملكة العربية السعودية الملك سلمان بن عبد العزيز</strong></h4>
-            <p>تلقى رئيس مجلس الوزراء الدكتور حيدر العبادي اليوم الاثنين اتصالا هاتفيا من ملك المملكة العربية السعودية الملك سلمان بن عبد العزيز. وجرى خلال الاتصال بحث تعزيز التعاون بين البلدين ومباركة نجاح المباراة الودية بين منتخبي البلدين الشقيقين. واكد الملك سلمان بن عبد العزيز اهمية تعزيز العلاقات وروح الاخوة بين البلدين ودعم المملكة لجهود إعمار العراق ووحدته. </p>
-            <p>من <a><strong>المكتب الإعلامي لرئيس 
-                    الوزراء</strong></a>,5–  اذار - 2018</p>
-            <a class="btn btn-success mb-3 waves-light" mdbRippleRadius>أقرأ المزيد</a>
-        </div>
-        <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-    <hr class="hr-width mb-5 mt-5 pb-3">
-
-    <!--Grid row-->
-    <div class="row">
-
-        <!--Grid column-->
-        <div class="col-lg-7 col-xl-6 offset-xl-1 pb-3">
-            <!--Excerpt-->
-            <a href="" class="red-text"><h6 class="font-bold pb-1"><i class="fa fa-image"></i>الاخبار</h6></a>
-            <h4 class="mb-4"><strong>رئيس مجلس الوزراء الدكتور حيدر العبادي يستقبل الأمين العام لمنظمة حلف شمال الاطلسي (الناتو) السيد ينس ستولتنبرغ</strong></h4>
-            <p>استقبل رئيس مجلس الوزراء الدكتور حيدر العبادي في مكتبه اليوم الاثنين الأمين العام لمنظمة حلف شمال الاطلسي (الناتو) السيد ينس ستولتنبرغ والوفد المرافق له. ورحب الدكتور حيدر العبادي بالوفد الضيف، مؤكدا اهمية التعاون مع حلف الناتو لمحاربة الارهاب. </p>
-                <p>من <a><strong>المكتب الإعلامي لرئيس 
-                    الوزراء</strong></a>,5– اذار - 2018</p>
-                    <a class="btn btn-red mb-3 waves-light" mdbRippleRadius>أقرأ المزيد</a>
-                </div>
-                <!--Grid column-->
-                <!--Grid column-->
-                <div class="col-lg-5 col-xl-4 mb-5">
-                    <!--Featured image-->
-                    <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
-                        <img src=".\assets\images/5-3-201801.jpg" alt="Second image in the first version of blog listing" height="300" width="450">
-                        <a>
-                            <div class="mask"></div>
-                        </a>
-                    </div>
-                </div>
-                <!--Grid column-->
-                
-
-    </div>
-    <!--Grid row-->
-
-    <hr class="hr-width mb-5 mt-4 pb-3">
-
-    <!--Grid row-->
-    <div class="row pb-5">
-
-        <!--Grid column-->
-        <div class="col-lg-5 col-xl-4 offset-xl-1 pb-3">
-            <!--Featured image-->
-            <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
-                <img src=".\assets\images/4-3-201802.jpg" alt="Thrid image in the blog listing." height="300" width="450">
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-7 col-xl-6">
+              <!--Excerpt-->
+              <a href="" class="green-text">
+                <h6 class="font-bold pb-1">
+                  <i class="fa fa-newspaper-o"></i>{{type}}</h6>
+              </a>
+              <h4 class="mb-4">
+                <strong>{{title}}</strong>
+              </h4>
+              <p>{{subContent}}</p>
+              <p>من
                 <a>
-                    <div class="mask"></div>
-                </a>
+                  <strong>{{by}}
+                  </strong>
+                </a>{{creatAt}}</p>
+              <a class="btn btn-success mb-3 waves-light" mdbRippleRadius>{{readMore}}</a>
             </div>
-        </div>
-        <!--Grid column-->
+            <!--Grid column-->
 
-        <!--Grid column-->
-        <div class="col-lg-7 col-xl-6">
-            <!--Excerpt-->
-            <a href="" class="indigo-text"><h6 class="font-bold pb-1"><i class="fa fa-suitcase"></i>الخطب</h6></a>
-           <h4 class="mb-4"><strong>رئيس مجلس الوزراء القائد العام للقوات المسلحة الدكتور حيدر العبادي يترأس اجتماعاً للمجلس الوزاري للأمن الوطني</strong></h4>
-            <p>ترأس رئيس مجلس الوزراء القائد العام للقوات المسلحة الدكتور حيدر العبادي اليوم الاحد اجتماعاً للمجلس الوزاري للأمن الوطني. وجرى خلال الاجتماع تقديم ايجاز عن استعدادات اللجنة الأمنية المسؤولة عن تأمين عملية الانتخابات البرلمانية المقبلة ومناقشة تلك الاستعدادات، وتمت الموافقة على عدد من متطلبات اللجنة لتأمين الانتخابات البرلمانية أمنيا.</p>
-            <p>من <a><strong>المكتب الإعلامي لرئيس 
-                    الوزراء</strong></a>, 4–  اذار - 2018</p>
-            <a class="btn btn-indigo mb-3 waves-light" mdbRippleRadius>أقرأ المزيد</a>
-        </div>
-        <!--Grid column-->
-
-    </div>
-    <!--Grid row-->
-
-</section>
-<!--Section: Blog v.1-->
-            
           </div>
+          <!--Grid row-->
+          <!--Grid row-->
+          <!--Grid row-->
+          <!--Grid row-->
+          <!--Grid row-->
+        </section>
+        <!--Section: Blog v.1-->
       </div>
+    </div>
   </div>
 </main>
 <!-- /.Main -->
-
-   
-                
-      
+<!--links -->
