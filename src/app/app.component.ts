@@ -11,5 +11,6 @@ export class AppComponent {
   by = 'المكتب الإعلامي لرئيس الوزراء';
   readMore = 'أقرأ المزيد';
   searchPlaceholder = 'بحث';
-  PMO='المكتب الاعلامي لرئاسة الوزراء'
+  PMO='المكتب الاعلامي لرئاسة الوزراء';
+  from ='من';
 }
