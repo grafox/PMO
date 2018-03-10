@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+//import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -19,7 +20,8 @@ export class AppComponent {
   creatAt = '6/3/2018'
   image = 'https://firebasestorage.googleapis.com/v0/b/firebase-egav.appspot.com/o/images%2F4-3-201802.jpg?alt=media&token=8ed21494-6c7f-4775-8fc8-a9cf4520f987';
 
-  constructor(){
-    
+  items: Observable<any[]>;
+  constructor(db: AngularFirestore) {
+    this.items = db.collection('items').valueChanges();
   }
 }
