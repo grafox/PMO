@@ -1,6 +1,6 @@
 <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-default ie-nav" [containerInside]="false">
   <logo>
-    <img src=".\assets\images\logo-sm.png" class="float-right" >
+    <img src=".\assets\images\logo-sm.png" class="float-right">
     <a class="logo navbar-brand" href="/">
       <h3 class="h3-responsive">
         <strong>{{PMO}}</strong>
@@ -42,18 +42,22 @@
     <div class="row pt-5">
       <div class="col text-center">
         <!--Section: Blog v.1-->
-        <section class="section pb-3 text-center text-lg-right">
+        <section class="section pb-3 text-center text-lg-right" *ngFor="let post of postesArabic | async">
           <!--Section heading-->
-          <h1 class="section-heading h1 pt-4">{{type}}</h1>
+          <!--h1 class="section-heading h1 pt-4">{{post.type}}</h1-->
           <!--Section description-->
-          <p class="section-description">{{type}}</p>
+          <p class="section-description">{{post.type}}</p>
           <!--Grid row-->
           <div class="row">
+
+            <h4 class="mb-4">
+              <strong>{{post.title}}</strong>
+            </h4>
             <!--Grid column-->
             <div class="col-lg-5 col-xl-4 offset-xl-1 pb-3">
               <!--Featured image-->
               <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
-                <img class="animated fadeIn img-thumbnail" [src]="image">
+                <img class="animated fadeIn img-thumbnail" src="{{ post.images}}">
                 <a>
                   <div class="mask"></div>
                 </a>
@@ -65,17 +69,13 @@
               <!--Excerpt-->
               <a href="" class="green-text">
                 <h6 class="font-bold pb-1">
-                  <i class="fa fa-newspaper-o"></i>{{type}}</h6>
+                  <i class="fa fa-newspaper-o"></i>  {{post.type}}</h6>
               </a>
-              <h4 class="mb-4">
-                <strong>{{title}}</strong>
-              </h4>
-              <p>{{subContent}}</p>
-              <p>{{from}}
-                <a>
-                  <strong>{{by}}
-                  </strong>
-                </a>{{creatAt}}</p>
+
+              <p>{{post.subContent}}</p>
+              <p>
+                <a><strong>{{post.by}} {{in}}  </strong>
+                </a>{{post.creatAt | date}}</p>
               <a class="btn btn-success mb-3 waves-light" mdbRippleRadius>{{readMore}}</a>
             </div>
             <!--Grid column-->
@@ -93,45 +93,61 @@
   </div>
 </main>
 <!-- /.Main -->
+<!-- /.Main -->
+
 
 <!--Pagination -->
-<nav class="my-4">
+<nav class="my-4" style="padding-top: 220px;">
   <ul class="pagination pagination-circle pg-blue mb-0">
 
-      <!--First-->
-      <li class="page-item disabled"><a class="page-link" mdbRippleRadius>First</a></li>
+    <!--First-->
+    <li class="page-item disabled">
+      <a class="page-link" mdbRippleRadius>First</a>
+    </li>
 
-      <!--Arrow left-->
-      <li class="page-item disabled">
-          <a class="page-link" mdbRippleRadius aria-label="Previous">
-              <span aria-hidden="true">«</span>
-              <span class="sr-only">Previous</span>
-          </a>
-      </li>
+    <!--Arrow left-->
+    <li class="page-item disabled">
+      <a class="page-link" mdbRippleRadius aria-label="Previous">
+        <span aria-hidden="true">«</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
 
-      <!--Numbers-->
-      <li class="page-item active"><a class="page-link" mdbRippleRadius>1</a></li>
-      <li class="page-item"><a class="page-link" mdbRippleRadius >2</a></li>
-      <li class="page-item"><a class="page-link" mdbRippleRadius >3</a></li>
-      <li class="page-item"><a class="page-link" mdbRippleRadius >4</a></li>
-      <li class="page-item"><a class="page-link" mdbRippleRadius >5</a></li>
+    <!--Numbers-->
+    <li class="page-item active">
+      <a class="page-link" mdbRippleRadius>1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" mdbRippleRadius>2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" mdbRippleRadius>3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" mdbRippleRadius>4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" mdbRippleRadius>5</a>
+    </li>
 
-      <!--Arrow right-->
-      <li class="page-item">
-          <a class="page-link" mdbRippleRadius aria-label="Next">
-              <span aria-hidden="true">»</span>
-              <span class="sr-only">Next</span>
-          </a>
-      </li>
+    <!--Arrow right-->
+    <li class="page-item">
+      <a class="page-link" mdbRippleRadius aria-label="Next">
+        <span aria-hidden="true">»</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
 
-      <!--First-->
-      <li class="page-item"><a class="page-link">Last</a></li>
+    <!--First-->
+    <li class="page-item">
+      <a class="page-link">Last</a>
+    </li>
 
   </ul>
 </nav>
 <!--/Pagination -->
 
-      
+
 
 <!--Footer-->
 <footer class="page-footer blue center-on-small-only">
@@ -142,9 +158,10 @@
 
   <!--Copyright-->
   <div class="footer-copyright">
-      <div class="container-fluid">
-          © 2017 Copyright: <a href="http://grafox"> grafox.net </a>
-      </div>
+    <div class="container-fluid">
+      © 2017 Copyright:
+      <a href="http://grafox"> grafox.net </a>
+    </div>
   </div>
   <!--/.Copyright-->
 </footer>
