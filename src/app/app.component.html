@@ -46,18 +46,18 @@
           <!--Section heading-->
           <!--h1 class="section-heading h1 pt-4">{{post.type}}</h1-->
           <!--Section description-->
-          <p class="section-description">{{post.type}}</p>
+          <p class="section-description">{{post.data.type}}</p>
           <!--Grid row-->
           <div class="row">
-
+            
             <h4 class="mb-4">
-              <strong>{{post.title}}</strong>
+              <strong>{{post.data.title}}</strong>
             </h4>
             <!--Grid column-->
             <div class="col-lg-5 col-xl-4 offset-xl-1 pb-3">
               <!--Featured image-->
               <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
-                <img class="animated fadeIn img-thumbnail" src="{{ post.images}}">
+                <img class="animated fadeIn img-thumbnail" src="{{ post.data.images}}">
                 <a>
                   <div class="mask"></div>
                 </a>
@@ -72,10 +72,10 @@
                   <i class="fa fa-newspaper-o"></i>  {{post.type}}</h6>
               </a>
 
-              <p>{{post.subContent}}</p>
+              <p>{{post.data.subContent}}</p>
               <p>
-                <a><strong>{{post.by}} {{in}}  </strong>
-                </a>{{post.creatAt | date}}</p>
+                <a><strong>{{post.data.by}} {{in}}  </strong>
+                </a>{{post.data.creatAt | date}}</p>
               <a class="btn btn-success mb-3 waves-light" mdbRippleRadius>{{readMore}}</a>
             </div>
             <!--Grid column-->
