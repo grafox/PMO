@@ -32,20 +32,20 @@ export class DetailsComponent implements OnInit {
     private afs: AngularFirestore,
     private route: ActivatedRoute,
     private router: Router) {
-    this.route.params.subscribe((params: Params) => {
-      console.log(params);
-      this.postId = params;
-    })
-    this.postDoc = this.afs.doc('postesArabic/' + this.postId);
+      
+    }
+    ngOnInit() {
+      this.route.params.subscribe((params: Params) => {
+        console.log(params);
+        this.postId = params;
+      })
+      this.postDoc = this.afs.doc('postesArabic/' + this.postId);
     this.data = this.postDoc.snapshotChanges().map(Action =>{
       const data = Action.payload.data() as Post;
       const id = Action.payload.id;
-      return console.log(this.data);
+      return { id, data };
     })
     console.log(this.data);
-  }
-  ngOnInit() {
-
   }
 
 }
