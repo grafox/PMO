@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+
 import { DatePipe } from '@angular/common';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 //import { AngularFirestore } from 'angularfire2/firestore';
@@ -25,7 +27,7 @@ export class AppComponent {
   readMore = 'أقرأ المزيد';
   searchPlaceholder = 'بحث';
   PMO = 'المكتب الاعلامي لرئاسة الوزراء';
-  // in ='في'
+  in ='في'
 
   postesArabicCol: AngularFirestoreCollection<Post>;
   postesArabic: any;
@@ -39,7 +41,6 @@ export class AppComponent {
   post: Observable<Post>;
 
   constructor(private afs: AngularFirestore) {
-
   }
 
   ngOnInit() {

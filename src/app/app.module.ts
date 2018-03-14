@@ -16,11 +16,17 @@ import { AppComponent } from './app.component';
 
 import { FormsModule} from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsComponent
+    DetailsComponent,
+    HomeComponent,
+    FooterComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
