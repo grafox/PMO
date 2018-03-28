@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyCFyNliYi_ApJOINmbIa8G2NdAmHHtPqpo",
-    authDomain: "egav.firebaseapp.com",
-    databaseURL: "https://egav.firebaseio.com",
-    projectId: "firebase-egav",
-    storageBucket: "firebase-egav.appspot.com",
-    messagingSenderId: "140011368516"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
   }
 };
